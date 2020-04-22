@@ -1,0 +1,212 @@
+@media (max-width: 800px){
+ /*query para pantallas hasta 800px*/
+body{
+    box-sizing: content-box;
+
+    header{
+            .logo{
+                margin-left: 5%;
+            }
+            .burguer{
+                width: 18px;
+                height: 12px;
+                margin-right: 5%;
+                .ham{#cross{display: none;}}
+            }
+            
+            width: 100%;
+            height: 44px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+    
+        #hamburguesa {
+            display: none;
+            }
+            #menu {
+            display: none;
+            position: absolute;
+            text-align: left;
+            list-style: none;
+            font-family: $font-ibmPlexMono;
+            font-size: 16px;
+            width: 100%;
+            height: 224px;
+            background-color: #0000EC;
+            z-index: 1;
+                       
+                li{
+                    a{
+                        margin-left: 5%;
+                        color:$color-one;}
+                        &:hover{
+                            a{
+                            color: $button-color;
+                            text-decoration-line: line-through;
+                            }   
+                        }
+                        &:active{
+                            a{
+                            color: rgba(6,10,36,0.56);
+                            text-decoration-line: line-through;
+                            }
+                        }
+                    }
+            }
+            ​
+            #menu{ li{ a {
+                display: block;
+            }}
+            }
+            #hamburguesa:checked + #menu{
+                position: absolute;
+                width: 100%;
+                top: 44px;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+            #hamburguesa:checked ~ .ham #bars{
+                display: none;
+            }
+            #hamburguesa:checked ~ .ham #cross{
+                display: block;
+            }
+        
+    }
+    
+    .hello{
+        .mobile{display: block;} //un texto debe verse en este formato y otro no #mobile
+
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        h1{
+            margin-left: 5%;
+        }
+        p{
+            margin-left: 5%;
+            margin-top: 16px;
+            width: 90%;
+            font-size: 14px;
+        }
+        
+        button{
+            margin-top: 36px;
+            margin-left: 5%;
+            width: 90%;
+        }
+    }
+
+    .episodios{margin: 0;
+        h2{margin-left: 5%;}
+        iframe{width: 90%;}
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 8em;
+        margin-top: 24px;
+        background-image: linear-gradient(225deg, $color-two 0%, $color-three 100%);
+        clip-path: polygon(0 3%, 100% 0, 100% 97%, 0% 100%);
+        
+    }
+
+    
+
+    .boton{
+        width: 100%;
+        height: 48px;
+    }
+
+    .history{
+        display: flex;
+        flex-direction: column;
+        margin-top: -6em;
+        img{
+            position: relative;
+            max-width: 100%;
+        }
+        h2{
+            width: 90%;
+            margin: auto;
+            margin-bottom: 8px;
+        }
+        p{
+            margin-top: 0;
+            margin-left: 5%;
+            width: 90%;
+        }
+        margin-bottom: 54px;
+    }
+
+    .guess{
+        margin: 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 48px;
+        h2{
+            margin-left: 5%;
+            letter-spacing: 0;
+            line-height: 42px;
+            margin-bottom: 14px;
+        }
+        img{
+            float: left;
+            width: 100%;
+        }
+    }
+
+    .temas{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        h2{
+            margin-left: 5%;
+            text-align: left;
+            margin-bottom: 1em;
+        }
+        h3{
+            font-weight: 600;
+            font-size: 24px;
+            margin-top: 13px;
+            margin-bottom: 2em;
+            .change{
+                display: none;
+        }
+        
+        }
+    }
+    
+    .novedades{
+        button{
+            width: 80%;
+        }
+        padding-top: 64px;
+        background-image: linear-gradient(225deg, $color-two 0%, $color-three 100%);
+        clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+    }
+    
+
+    footer{
+        height: 121px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        h4{
+            text-align: center;
+            font-weight: 200;
+            }
+        div{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            a{
+                margin-bottom: 1em;
+            }
+            }
+        }
+}
+}

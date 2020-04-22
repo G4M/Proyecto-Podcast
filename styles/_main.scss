@@ -1,0 +1,138 @@
+@import'_variables.scss';
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body{
+    background-color: $color-one;
+    display: flex;
+    flex-direction: column;
+    box-sizing: content-box;
+
+    /*Todas las secciones son relativas y ocupan todo el ancho en relacion al body*/
+    section{
+        position: relative;
+        width: 100%;
+    }
+
+    /*Asignacion de fuentes en general para h y p, algunas se sobreescribirán para cumplir con el diseño*/
+    h1, h2{
+        font-family: $font-ibmPlexSans;
+        font-weight: 400;
+        font-size: 2.25em;
+        position: relative;
+        span{
+            position: relative;            
+            text-decoration-line: line-through;
+            
+        }
+        #dot{
+            color: #0000EC;
+            text-decoration-line: none;
+        }
+    }
+    h3{
+        font-family: $font-ibmPlexSans;
+        font-weight: 600;
+        color: $text-color;
+    }
+
+    p{
+        margin-top: 1em;
+        font-family: $font-ibmPlexMono, sans-serif;
+        font-size: 0.875em;
+        letter-spacing: 0;
+        text-align: justify;
+        line-height: 24px;
+    } 
+    
+    .hello{
+        .desk{display: none;}
+        .mobile{display: none;}
+    }
+
+    /*los botones son similares, propiedades generales y hover, asignaciones particulares en queries*/
+   .boton{
+       background: $button-color;
+       color: $text-color;
+       font-family: $font-ibmPlexMono;
+       font-weight: bold;
+       border: 0;
+              
+       &:hover{
+        background: linear-gradient(225deg, $color-two 0%, #00F0B8 100%);
+        color: $color-one;
+        
+    }
+   }
+   
+   /*seccion de episodios, posicionamiento general*/
+   .episodios{
+    width: 100%;
+    margin-top: 24px;
+    display: flex;
+    box-sizing: content-box;
+    
+  
+        h2{
+            top: 1em;
+            padding-bottom: 0.5em;
+            position: relative;
+            margin-top: 5vw;
+            color: $color-one;
+            line-height: 42px;
+        }
+        iframe{
+            top: 1.5em;
+            padding-bottom: 11px;
+            position: relative;
+            margin: auto;
+            border: none;
+            height: 232px;
+        }
+    
+    }
+
+    /*Seccion de novedades posicionamento general*/
+    .novedades{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin-top: 0;
+        h2{
+            align-self: center;
+            width: 80%;
+            letter-spacing: 0;
+            text-align: center;
+            line-height: 42px;
+            color: $color-one;
+        }
+        button{
+            align-self: center;
+            margin-top: 36px;
+            margin-bottom: 67px;
+        }
+
+    }
+
+}
+/*Seccion Footer para redes sociales, asignacion de fuentes, colores y posicionamiento general*/
+footer{
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    background-color: $color-one;
+    a{
+        color: $text-color;
+    }
+    h4{
+        font-family: $font-ibmPlexMono;
+        color: $text-color;
+    }
+}
